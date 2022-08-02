@@ -34,8 +34,7 @@ import time
 
 def main():
     for line in fileinput.input():
-        command = to_http(line)
-        if command:
+        if command := to_http(line):
             sys.stdout.write(to_http(line))
             sys.stdout.flush()
 
